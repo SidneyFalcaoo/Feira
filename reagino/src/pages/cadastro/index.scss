@@ -1,0 +1,124 @@
+.pagina-cadastro {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    background-color: #F0EFEF;
+
+    .titulo {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 10px;
+        margin-top: 20px;
+
+        padding: 10px 50px;
+
+        h1 {
+            width: 800px;
+
+            font-family: 'fonte1';
+            font-size: 38px;
+
+            letter-spacing: 11px;
+            text-align: center;
+
+            margin: 0px 0px 10px 0px;
+        }
+
+        h2 {
+            width: 650px;
+
+            font-size: 30px;
+            text-align: center;
+            font-family: 'fonte1';
+
+            letter-spacing: 10px;
+        }
+    }
+
+    .input {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        height: 450px;
+        width: 430px;
+
+        border-radius: 33px;
+
+        background-color: #d7d7d7;
+        border-bottom: 2px solid black;
+        box-shadow: 0px 0px 10px 1px #d7d7d7;
+
+        input {
+            height: 50px;
+            width: 300px;
+
+            border-radius: 9px;
+            border: none;
+
+            margin: 5px;
+            padding-left: 20px;
+
+            background-color: #ffffff8a;
+        }
+
+        button {
+            height: 50px;
+            width: 150px;
+
+            background-color: #000;
+            color: #fff;
+
+            border-radius: 11px;
+            border: none;
+        }
+
+        button:hover {
+            padding: 10px 25px;
+
+            background-color: #fff;
+            color: #000;
+
+            border-radius: 10px;
+            border: 1px solid #616161;
+
+            transition: .3s;
+        }
+
+        input:focus-visible{
+            outline: none;
+        }
+    }
+
+    
+    .input > input:nth-child(1){
+        border-bottom: 1px solid black;
+    }
+
+    .input > input:nth-child(2){
+        border-bottom: 1px solid black;
+    }
+
+    .input > input:nth-child(3){
+        border-bottom: 1px solid black;
+    }
+
+    .input > input:nth-child(4){
+        border-bottom: 1px solid black;
+    }
+    
+    .input > input:nth-child(5){
+        border-bottom: 1px solid black;
+    }
+}
+

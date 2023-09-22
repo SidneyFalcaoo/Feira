@@ -1,0 +1,142 @@
+.comp-cabecalho {
+    display: flex;
+    height: 130px;
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    box-shadow: 0px 2px 5px #686868b0;
+
+    background-color: white;
+
+    img {
+        height:150%;
+        width: 15%;
+    }
+
+    .atributo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barra-pesquisa > input{
+        border: none;
+        background-color: transparent;
+        padding: 10px 10px;
+        width: 100%;
+    }
+
+    .barra-pesquisa > input:focus-visible{
+        outline: none;
+    }
+
+    .barra-pesquisa > img{
+        height: 40px;
+        width: 50px;
+        padding: 5px 10px;
+
+        cursor: pointer;
+        position: relative;
+
+        bottom: 2px;
+        right: 2px;
+
+        transition: .3s;
+    }
+
+    .barra-pesquisa > img:hover{
+        transform: scale(1.1);    
+    }
+
+    .barra-pesquisa{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid #000;
+        width: 700px;
+        background-color: #E2E2E2;
+        height: 40px;
+        border-radius: 15px;
+    }
+
+    .navegacao{
+        display: flex;
+        
+        margin-top: 5px;
+        justify-content: space-between;
+        width: 550px;
+
+        transition: .3s;
+    }
+
+    .navegacao > a{
+        text-decoration: none;
+        color: #000;
+        
+        padding-top: 20px;
+
+        font-family: "fonte1";
+        font-weight: bolder;
+
+        transition: 0.5s;
+    }
+
+    .navegacao > a:hover{
+        text-decoration: underline;
+    }
+
+    .icones{
+        width: 115px;
+        justify-content: space-between;
+        display: flex;
+        margin-right: 10px;
+
+    }
+
+    .icones > .login > img{
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    .icones > .carrinho > img{
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    .icones > .login, .carrinho{
+        transition: .1s;
+    }
+
+    .icones > .login:hover{
+        transform: scale(1.1);
+    }
+
+    .icones > .carrinho:hover{
+        transform: scale(1.1);
+    }
+
+    .logo > img{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+ @media (max-width: 360px){
+    .comp-cabecalho{
+        height: 50px;
+        width: 360px;
+
+            img {
+            height:10%;
+            width: 10%;
+        }
+
+        .barra-pesquisa{
+            display: none;
+        }
+    }
+}
