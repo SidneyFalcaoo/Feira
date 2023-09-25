@@ -1,7 +1,15 @@
 import './index.scss';
 import Cabecalho from '../../components/cabecalho';
+import { useState } from 'react';
+
+
+
 
 export default function Cadastro() {
+
+    const [ nome, setNome ] = useState('')
+    const [ email, setEmail ] = useState('');
+    const [ senha, setSenha ] = useState('');
     
     return (
 
@@ -17,8 +25,6 @@ export default function Cadastro() {
                 <input type="text" placeholder='Nome completo' />
                 <input type="text" placeholder='Email'/>
                 <input type="text" placeholder='Senha' />
-                <input type="text" placeholder='Confirmar senha' />
-                <input type="text" placeholder='CPF' />
 
                 <button> Registrar </button>
             </article>
