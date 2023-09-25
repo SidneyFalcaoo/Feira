@@ -1,4 +1,4 @@
-import Email from '../../../public/assets/img/email.png';
+import Email from '../../assets/img/email.png';
 import Facebook from '../../assets/img/facebook.png';
 import Instagram from '../../assets/img/instagram.png';
 import Twitter from '../../assets/img/twitter.png';

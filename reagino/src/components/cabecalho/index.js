@@ -1,12 +1,13 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/img/logo.png'
 
 export default function Cabecalho () {
 
     return(
         <div className='comp-cabecalho' > 
             <Link className='logo' to='/'>
-                <img alt='a-logo' src='/assets/img/logo.png' />
+                <img alt='a-logo' src={Logo} />
             </Link>
 
             <article className="atributo">
