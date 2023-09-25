@@ -15,16 +15,22 @@ export default function Cadastro() {
 
 
     async function Logar() {
-        const resp = await axios.post('http://localhost:5000/usuario/login', {
-            nome: nome,
-            email: email,
-            senha: senha
-        });
 
-        if(resp.status === 200)
-        {
-            alert('deu bom')
+        try {
+           const resp = await axios.post('http://localhost:5000/usuario/login', {
+                nome: nome,
+                email: email,
+                senha: senha
+            });
+
+            if(resp.status === 200)
+            {
+                alert('deu bom')
+            } 
+        } catch (error) {
+            alert(error.response.data.erro)
         }
+        
     }
     
     return (

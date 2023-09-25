@@ -1,4 +1,4 @@
-import { Consultar, LogarUsuario, LoginUsuario } from "../Repository/loginUsuarioRepository.js";
+import { LogarUsuario } from "../Repository/loginUsuarioRepository.js";
 
 import { Router } from "express";
 const Endpoint = Router();
@@ -19,10 +19,7 @@ Endpoint.post('/usuario/login', async (req, resp) => {
         if (!login.email) throw new Error ('Email obrigatorio');
         if (!login.senha) throw new Error ('Senha obrigatorio');
 
-        
-        const resp1 = await Consultar(login.email);
-        if (resp1.length > 0) 
-        throw new Error ('Email ja cadastrado');
+    
 
 
         const Logar = await LogarUsuario(login);
@@ -32,35 +29,6 @@ Endpoint.post('/usuario/login', async (req, resp) => {
         resp.status(500).send({ erro: error.message })
     }    
 });
-
-
-
-
-
-
-
-
-// Usuario poder Logar //
-Endpoint.post('/usuario/logar', async (req, resp) => {
-    try {
-        const { email, senha } = req.body;
-        const linhas = await LoginUsuario(email, senha);
-    
-        if(!linhas) throw new Error('Credenciais invalidas!');
-    
-        resp.send(linhas);
-    } 
-    catch (error) {
-        resp.status(500).send({ erro: error.message })
-    }
-});
-
-
-
-
-
-
-
 
 
 
