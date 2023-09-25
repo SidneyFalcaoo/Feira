@@ -14,7 +14,7 @@ root.render(
     <BrowserRouter>
       <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/cadsatro' element={<Cadastro/>} />
+          <Route path='/cadastro' element={<Cadastro/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -25,7 +25,7 @@ export default function Cabecalho () {
             </article>
 
             <article className='icones'>
-                <Link className='login' to='/login'>
+                <Link className='login' to='/cadastro'>
                     <img alt='icone-pessoa' src='/assets/img/pessoinha.png'/>
                 </Link>
                 
