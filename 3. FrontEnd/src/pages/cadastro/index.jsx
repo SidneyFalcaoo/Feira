@@ -25,7 +25,7 @@ export default function Cadastro() {
 
             if(resp.status === 200)
             {
-                alert('deu bom')
+                
             } 
         } catch (error) {
             alert(error.response.data.erro)
