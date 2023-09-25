@@ -3,7 +3,6 @@ import Cabecalho from '../../components/cabecalho';
 import { useState } from 'react';
 
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 
 
@@ -15,9 +14,6 @@ export default function Cadastro() {
     const [ senha, setSenha ] = useState('');
 
 
-    const navigate = useNavigate();
- 
-
     async function Logar() {
         const resp = await axios.post('http://localhost:5000/usuario/login', {
             nome: nome,
@@ -25,7 +21,10 @@ export default function Cadastro() {
             senha: senha
         });
 
-        
+        if(resp.status === 200)
+        {
+            alert('deu bom')
+        }
     }
     
     return (

@@ -25,10 +25,6 @@ Endpoint.post('/usuario/login', async (req, resp) => {
         if (resp1.length > 0) 
         throw new Error ('Email ja cadastrado');
 
-        const resp2 = await Consultar(login.cpf)
-        if (resp2.length > 0) 
-        throw new Error ('Cpf ja cadastrado');
-
 
         const Logar = await LogarUsuario(login);
         resp.send(Logar);
