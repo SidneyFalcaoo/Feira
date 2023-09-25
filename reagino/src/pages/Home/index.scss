@@ -1,0 +1,241 @@
+.pagina-home{
+    display: flex;
+
+    height: auto;
+    max-width: 100%;
+
+    flex-direction: column;
+
+    .s1{
+        display: flex;
+
+        height: 620px;
+        width: 100%;
+    }
+
+    .s2{
+        display: flex;
+
+        height: 200px;
+        width: 100%;
+
+        align-items: center;
+        justify-content: space-evenly;
+
+        article{
+            display: flex;
+
+            height: auto;
+            width: auto;
+
+            flex-direction: column;
+            align-items: center;
+
+            padding: 30px;
+
+
+            img{
+                height: 50px;
+                width: 50px;
+
+                transition: .3s;
+            }
+
+            h1{
+                font-size: 15px;
+                font-family: "fonte1";
+                width: 150px;
+                text-align: center;
+            }
+        }
+    }
+
+    .s2 > article:nth-child(1) > img:hover{
+        margin-left: 20px;    
+    }
+
+    .s2 > article:nth-child(2) > img:hover{
+        animation: imgs linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-duration: .2s; 
+    }
+
+    .s2 > article:nth-child(3) > img:hover{
+        animation: spin infinite 1s linear;   
+    }
+
+    .s2 > article:nth-child(4) > img:hover{
+        animation: lock linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-duration: .1s; 
+    }
+
+    @keyframes imgs {
+        from{
+            margin-left: 5px;
+        }
+        to{
+            margin-left: -5px;
+        }
+    }
+
+    @keyframes spin {
+        from{
+            transform: rotate(0deg);
+        }   
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes lock {
+        from{
+            margin-left: 2px;
+        }   
+        to{
+            margin-left: -2px;
+        }
+    }
+
+    .s3{
+        display: flex;
+
+        height: 200px;
+        width: 100%;
+
+        justify-content: space-evenly;
+
+        article{
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            img{
+                height: 140px;
+            }
+
+            button {
+                width: 120px;
+                height: 3em;
+
+                border-radius: 10px;
+                border: none;
+
+                font-size: 15px;
+                font-family: "fonte1";
+                font-weight: bolder;
+
+                background-color: grey;
+                color: white;
+
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                
+                box-shadow: 6px 6px 12px #c5c5c5,
+                            -6px -6px 12px #ffffff;
+
+                transition: .3s;
+                cursor: pointer;
+            }
+               
+               button::before {
+                content: '';
+                width: 0;
+                height: 60px;
+                position: absolute;
+                
+                top: 0;
+                left: 0;
+               
+                background-image: linear-gradient(-45deg, #000000 10%, #f1f1f1 90%);
+                transition: .5s ease;
+                display: block;
+                z-index: -1;
+            }
+               
+            button:hover::before {
+                width: 9em;
+            }
+
+            button:hover{
+                transform: scale(1.1);
+                box-shadow: 10px 5px 20px 0px black;
+            }
+        }
+    }
+
+    .s4{
+        display: flex;
+
+        height: 400px;
+        width: 100%;
+
+        background-color: #D9D9D9;
+
+        article{
+            display: flex;
+
+            height: auto;
+            width: 100%;
+
+            align-items: center;
+
+            background-image: url(../../../public/assets/img/componente.png);
+            background-repeat: no-repeat;
+            background-size: 50% 100%; 
+        }
+
+        p{
+            font-family: "fonte1";
+            font-size: 30px;
+
+            text-align: center;
+
+            height: 160px;
+            width: 420px;
+
+            padding-left: 20px;
+
+        }
+    }
+
+    .s5{
+        height: auto;
+        width: 100%;
+    
+        align-items: center;
+        justify-content: center;
+    
+        .slide-item{
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+    
+        .swiper-button-prev::after, .swiper-button-next::after{
+            color: white;
+        }
+
+        .main{
+            display: flex;
+
+            position: relative;
+
+            p{
+                color: white;
+                
+                font-family: "fonte1";
+                font-size: 40px;
+
+                position: absolute;
+                top: 2%;
+                right: 20%;
+            }
+        }
+    }
+}
+
