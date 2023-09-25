@@ -18,7 +18,6 @@ Endpoint.post('/usuario/login', async (req, resp) => {
         if (!login.nome) throw new Error ('Nome obrigatorio');
         if (!login.email) throw new Error ('Email obrigatorio');
         if (!login.senha) throw new Error ('Senha obrigatorio');
-        if (!login.cpf) throw new Error ('Cpf obrigatorio');
 
         
         const resp1 = await Consultar(login.email);
