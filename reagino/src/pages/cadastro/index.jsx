@@ -22,7 +22,7 @@ export default function Cadastro() {
             </article>
             
             <article className='input'>
-                <input type="text" placeholder='Nome completo' />
+                <input type="text" placeholder='Nome completo' value={nome} onChange={e => setNome(e.target.value)}/>
                 <input type="text" placeholder='Email'/>
                 <input type="text" placeholder='Senha' />
 
