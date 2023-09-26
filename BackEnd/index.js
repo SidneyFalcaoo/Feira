@@ -2,7 +2,7 @@ import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
 
-import loginUsuarioController from '../api/src/Controller/loginUsuarioController.js'
+import loginUsuarioController from './src/Controller/loginUsuarioController.js'
 
 const servidor = express();
 servidor.use(express.json())

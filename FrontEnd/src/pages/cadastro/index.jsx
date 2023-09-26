@@ -3,8 +3,7 @@ import Cabecalho from '../../components/cabecalho';
 import { useState } from 'react';
 
 import axios from 'axios';
-
-
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Cadastro() {
@@ -13,6 +12,7 @@ export default function Cadastro() {
     const [ email, setEmail ] = useState('');
     const [ senha, setSenha ] = useState('');
 
+    const navigate = useNavigate();
 
     async function Logar() {
 
@@ -23,12 +23,12 @@ export default function Cadastro() {
                 senha: senha
             });
 
-            if(resp.status === 200)
-            {
-                
-            } 
+            if(resp.status === 200) {
+                navigate('/');
+            }
+
         } catch (error) {
-            alert(error.response.data.erro)
+            alert(error.response.data.erro);
         }
         
     }
@@ -46,7 +46,7 @@ export default function Cadastro() {
             <article className='input'>
                 <input type="text" placeholder='Nome completo' value={nome} onChange={e => setNome(e.target.value)}/>
                 <input type="text" placeholder='Email'  value={email} onChange={e => setEmail(e.target.value)}/>
-                <input type="text" placeholder='***'  value={senha} onChange={e => setSenha(e.target.value)} />
+                <input type="password" placeholder='***'  value={senha} onChange={e => setSenha(e.target.value)} />
 
                 <button onClick={Logar}> Registrar </button>
             </article>
