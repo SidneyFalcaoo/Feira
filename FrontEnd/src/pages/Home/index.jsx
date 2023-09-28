@@ -9,7 +9,7 @@ export default function Home() {
         <div className='pagina-home'>
             <h1>Joyeria Cristallo</h1>
 
-            <img src={Logo}/>
+            <img src={Logo} alt='logo'/>
 
             <Link to='/login'>
                 <button>
